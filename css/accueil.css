@@ -1,0 +1,339 @@
+@import url(reset.css);
+@import url(variable.css);
+@import url(nav.css);
+@import url(footer.css);
+
+@font-face {
+    font-family: 'space_grotesklight';
+    src: url('../assets/fonts/spacegrotesk-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../assets/fonts/spacegrotesk-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/***********************   CSS General   ****************************/
+
+
+
+/**********   CSS General   **********/
+
+html, body{
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+
+/**********   CSS Header   ************/
+
+.header{
+    height: var(--max-height-header);
+    background: #000000 url(../assets/banners/banner-home.jpg);
+    background-size: cover;
+}
+
+.header__logo{
+    width: var(--max-width-logo);
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+    min-height: var(--min-height-nav);
+    background: rgba(243, 241, 241, 0.8);
+}
+
+.nav__list{
+    display: flex;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: var(--text-color-primary-dark);
+    font-weight: var(--font-weight-xl);
+    margin-left: var(--spacing-xl);
+}
+
+.header__title{
+    font-size: var(--font-size-h1);
+    text-transform: uppercase;
+    font-weight: var(--font-weight-xl);
+    color: var(--text-color-primary-white);
+    letter-spacing: var(--spacing-xs);
+    text-align: center;
+}
+
+.header__link__decouvrir{
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: var(--font-weight-xl);
+    color: var(--text-color-primary-white);
+}
+
+.header__block__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 48px;
+    margin-top: calc(var(--max-height-header)/2);
+}
+
+/************  Dropdown menu  ***********/
+
+.Dropdown__menu li{
+    width: 180px;
+}
+
+.Dropdown__menu li a:link, .Dropdown__menu a:visited{
+    display: block;
+    color: #000000;
+    background: #fff;
+    opacity: 0.60;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: clip;
+    line-height: 1rem;
+}
+
+.Dropdown__menu a:hover{
+    background-color: #bdb6b6;
+}
+
+.Dropdown__menu a :active{
+    background-color: #808080;
+}
+
+.Dropdown__menu{
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.link__chambre:hover .Dropdown__menu{
+    display: block;
+}
+
+
+
+/*****************     Dropdowmenu    ***************/
+
+/***************       CSS Header        ************/
+
+/*************** CSS MAIN ***********/
+
+.main{
+    padding: 64px;
+}
+
+.chambres, .restaurant, .hotels{
+    margin-bottom: 64px;
+}
+
+.chambre__title, .restaurant__title, .hotel__title, .balade__title{
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+
+.chambres__content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: var(--spacing-xl);
+}
+
+.chambre__picture{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-md);
+}
+
+.chambre__card__link{
+    text-decoration: none;
+    color: var(--text-color-primary-dark);
+}
+
+.chambre__card{
+    position: relative;
+}
+
+.chambre__card__title{
+    color: var(--text-color-primary-dark);
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.chambre__card__content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: var(--spacing-md) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(203, 192, 192, 0.4);
+    width: 100%;
+}
+
+.btn{
+    background: var(--bg-btn);
+    color: var(--text-color-primary-white);
+    text-decoration: none;
+    padding: var(--spacing-xs);
+    width: 100px;
+    text-align: center;
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-xl);
+}
+
+.restaurant, .hotels, .balade{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 64px;
+}
+
+.restaurant__content, .hotels__content, .balade__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: var(--spacing-md);
+}
+
+.restaurant__block__pictures{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 220px auto;
+    gap: var(--spacing-xl);
+}
+
+.restaurant__picture1{
+    grid-column: 1 / 7;
+}
+
+.restaurant__picture2{
+    grid-column: 1 / 3;
+}
+
+.restaurant__picture3{
+    grid-column: 3 / 7;
+}
+
+.restaurant__picture__item1{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-md);
+}
+
+.restaurant__picture__item2{
+    object-fit: cover;
+    width: 100%;
+    height: 180px;
+    border-radius: var(--radius-md);
+}
+
+.restaurant__picture__item3{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: var(--radius-md);
+}
+
+.hotel__picture__item, .balade__picture__item{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--spacing-md);
+}
+
+/*************CSS MAIN**************/
+
+.footer{
+    color: var(--text-color-primary-white);
+    height: var(--max-height-footer);
+    background: var(--bg-footer);
+    padding: 64px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer__content{
+    width: calc(100% / 3);
+}
+
+.footer__informations{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__phone{
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer__reseaux{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.reseaux__link{
+    font-size: 28px;
+    color: var(--text-color-primary-white);
+}
+
+/********************   Back to top   ***********/
+
+
+:root{
+    scroll-behavior: smooth;
+}
+
+.section{
+    padding-bottom: 5rem;
+}
+
+.scroll-top{
+    position: absolute; /* relative to its positioned <main> parent */
+    top: 120vh; /* starts below the bottom of the screen */
+    bottom: 3rem; /* stops scrolling before the end */
+    right: 1rem; /* offset from right hand side */
+}
+
+.scroll-top__link{
+    position: -webkit-sticky; /* for Safari */
+    position: sticky; /* 'relative' until element reaches... */
+    top: 85vh; /* 90% viewport height from the top, when it becomes 'fixed' - until its container toggles it back to 'relative' */
+    text-decoration:none;
+    border-radius: .25rem;
+    background-color: gray;
+    padding:1rem;
+    color: white;
+    font-weight:700;
+    opacity:0.8;
+    font-size: xx-large;
+}
+
+.scroll-top__link:hover{
+    opacity: initial;
+}
+
+/********************   Back to top   ***********/
+
+.footer__nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.footer__nav__link{
+    text-decoration: none;
+    color: var(--text-color-primary-white);
+}

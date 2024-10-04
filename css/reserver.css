@@ -1,0 +1,154 @@
+@import url(reset.css);
+@import url(variable.css);
+@import url(nav.css);
+@import url(footer.css);
+
+@font-face {
+    font-family: 'space_grotesklight';
+    src: url('../assets/fonts/spacegrotesk-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../assets/fonts/spacegrotesk-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**********   CSS General   **********/
+
+html, body{
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+
+/**************  CSS Main *************/
+
+.main{
+    padding: 64px;
+}
+
+.container{
+    
+}
+
+.title__h1{
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.title__h3{
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/************  Dropdown menu  ***********/
+
+.Dropdown__menu li{
+    width: 180px;
+}
+
+.Dropdown__menu li a:link, .Dropdown__menu a:visited{
+    display: block;
+    color: #000000;
+    background: #fff;
+    opacity: 0.60;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: clip;
+    line-height: 1rem;
+}
+
+.Dropdown__menu a:hover{
+    background-color: #bdb6b6;
+}
+
+.Dropdown__menu a :active{
+    background-color: #808080;
+}
+
+.Dropdown__menu{
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.link__chambre:hover .Dropdown__menu{
+    display: block;
+}
+
+
+
+/*****************     Dropdowmenu    ***************/
+
+
+
+/*************  formulaire  ***********/
+
+.contact-form{
+    /* background: #fff; */
+    padding: 9px;
+    /* border-radius: 5px; */
+    /* box-shadow: 0 0 5px rgba(0, 0, 0.1); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ::placeholder{
+        color: #bbbbbb;
+    }
+
+}
+
+.form__group{
+    width: 35%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+.contact-form h2{
+    margin-bottom: 15px;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+.contact-form button{
+    background: #1924c4;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 50%;
+    display: inline;
+}
+
+.contact-form button:hover{
+    background: #3538e9;
+}
+
+.btn__submit{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*************  formulaire  ***********/
+
+.footer{
+    height: 300px;
+}
+
+.slider{
+    margin-bottom: 64px;
+}

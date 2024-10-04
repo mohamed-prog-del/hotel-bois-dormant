@@ -1,0 +1,172 @@
+@import url(reset.css);
+@import url(variable.css);
+@import url(nav.css);
+@import url(footer.css);
+
+@font-face {
+    font-family: 'space_grotesklight';
+    src: url('../assets/fonts/spacegrotesk-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../assets/fonts/spacegrotesk-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**********   CSS General   **********/
+
+html, body{
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+
+/**************  CSS Main *************/
+
+.main{
+    padding: 64px;
+}
+
+/************  Dropdown menu  ***********/
+
+.Dropdown__menu li{
+    width: 180px;
+}
+
+.Dropdown__menu li a:link, .Dropdown__menu a:visited{
+    display: block;
+    color: #000000;
+    background: #fff;
+    opacity: 0.60;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: clip;
+    line-height: 1rem;
+}
+
+.Dropdown__menu a:hover{
+    background-color: #bdb6b6;
+}
+
+.Dropdown__menu a :active{
+    background-color: #808080;
+}
+
+.Dropdown__menu{
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.link__chambre:hover .Dropdown__menu{
+    display: block;
+}
+
+
+
+/*****************     Dropdowmenu    ***************/
+
+.chambre{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 64px;
+    margin-bottom: 64px;
+}
+
+.chambre__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    row-gap: var(--spacing-md);
+}
+
+.chambre__content__caracteristique{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: var(--spacing-md);
+}
+
+.chambre__picture__item{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--spacing-md);
+}
+
+.chambre__title, .restaurant__title{
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.btn{
+    background: var(--bg-btn);
+    color: var(--text-color-primary-white);
+    text-decoration: none;
+    padding: var(--spacing-xs);
+    width: 100px;
+    text-align: center;
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-xl);
+}
+
+.chambre__price{
+    font-size: var(--font-size-lg);
+    color: rgb(63, 63, 63);
+    font-weight: var(--font-weight-xl);
+}
+
+.picture__slider{
+    border-radius: var(--radius-md);
+}
+
+.chambres__content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--spacing-xl);
+}
+
+.chambre__picture{
+    width: 100%;
+    /* height: 100%; */
+    border-radius: var(--radius-md);
+}
+
+.chambre__card__link{
+    text-decoration: none;
+    color: var(--text-color-primary-dark);
+}
+
+.chambre__card{
+    position: relative;
+}
+
+.chambre__card__title{
+    color: var(--text-color-primary-dark);
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.chambre__card__content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: var(--spacing-md) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(203, 192, 192, 0.4);
+    width: 100%;
+}
+
+
+
+
+.footer{
+    height: 300px;
+}
+
+.slider{
+    margin-bottom: 64px;
+}
